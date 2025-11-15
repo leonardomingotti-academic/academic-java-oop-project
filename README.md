@@ -51,6 +51,21 @@ This is the only class that handles user I/O (Input/Output). It is responsible f
 * Calling the correct methods on the `Cart` or `repo`.
 * Printing the results (like the menu or the final receipt) to the console.
 
+### 5. `MainFrame.java` (The UI of the Application)
+
+This class provides a graphical user interface (GUI) using Java Swing, serving as a graphical replacement for the `cli.Main.java` (the console application). It is responsible for all visual layout and user interaction.
+
+Following the "Separation of Concerns" principle, this class is purely responsible for the "View" (the UI layout). It does not contain any business logic (like cart calculations or tax logic), which remains in the service and model classes.
+
+Its primary responsibilities are:
+* Building the main window (`JFrame`) and arranging the major UI panels using `BorderLayout`.
+* Displaying the item categories (e.g., "Drinks") in the left panel.
+* Displaying the list of available menu items (`JList`) in the center panel.
+* Providing controls (`JSpinner`, `JButton`) for the user to select an item and quantity.
+* Showing the current cart contents in a `JTable` (right panel).
+* Displaying the `subtotal`, `tax`, and `total` in the bottom bar.
+
+
 ## How to Build and Run
 
 This project is built using Apache Maven.
@@ -76,3 +91,8 @@ Here is the flow of an order:
 
 **3. Final Receipt**
 <img width="2559" height="1529" alt="image" src="https://github.com/user-attachments/assets/a3da62d6-540e-46ac-ba24-2c49f7ac2b60" />
+
+**4. UI Skeleton**
+<img width="2558" height="1532" alt="image" src="https://github.com/user-attachments/assets/9bc983c9-07a6-4d48-b27c-40aeb588275e" />
+
+
